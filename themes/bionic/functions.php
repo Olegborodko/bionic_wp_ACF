@@ -138,10 +138,20 @@ add_action( 'widgets_init', 'bionic_widgets_init' );
  * Enqueue scripts and styles.
  */
 function bionic_scripts() {
-	wp_enqueue_style( 'bionic-style', get_stylesheet_uri(), array(), _S_VERSION );
+  wp_enqueue_style( 'bionic-bootstrap', get_template_directory_uri() . "/sass/bootstrap.css", array(), _S_VERSION );
+
+  wp_enqueue_style( 'bionic-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'bionic-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'bionic-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+  wp_enqueue_style( 'bionic-font-awesome', get_template_directory_uri() . "/fonts/font-awesome-4.7.0/css/font-awesome.min.css", array(), _S_VERSION );
+
+  wp_enqueue_style( 'bionic-swiper', get_template_directory_uri() . "/sass/swiper-bundle.min.css", array(), _S_VERSION );
+
+	wp_enqueue_script( 'bionic-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), _S_VERSION, true );
+
+  wp_enqueue_script( 'bionic-swiper-js', get_template_directory_uri() . '/js/swiper-bundle.min.js', array(), _S_VERSION, true );
+
+  wp_enqueue_script( 'bionic-custom', get_template_directory_uri() . '/js/custom.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -176,3 +186,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+if( function_exists('acf_add_options_page') ) {
+  acf_add_options_page();
+}

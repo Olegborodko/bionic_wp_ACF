@@ -33,7 +33,8 @@
         <nav class="navbar navbar-expand-xl navbar-light">
           <div class="section-top-menu">
             <a class="navbar-brand" href="#">
-              <img class="logo" src="img/logo.svg" alt="logo" />
+              <?php $image = get_field('top_logo', 'option'); ?>
+              <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" alt="logo" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bionic-navbar-top"
               aria-controls="bionic-navbar-top" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,7 +43,7 @@
             <div class="collapse navbar-collapse" id="bionic-navbar-top">
 
               <?php
-              $menu_items = wp_get_nav_menu_items('primary-menu');
+              $menu_items = wp_get_nav_menu_items('top-menu');
 
               if ($menu_items) {
                 echo '<ul class="navbar-nav ms-auto mb-2 mb-lg-0">';

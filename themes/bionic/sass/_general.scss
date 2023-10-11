@@ -1,0 +1,89 @@
+.container-main {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.container-footer {
+  width: 100%;
+  max-width: 1104px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+body .ic-registered{
+  position: relative;
+  transform: translateY(-70%);
+  font-size: 50%;
+}
+
+$primary: #005FAD;
+$secondary: #6D6E71;
+$secondary-two: #707070;
+$alto: #D8D8D8;
+$white: #FFFFFF;
+$regal-blue: #004075;
+
+$size-1: 44px; //h1
+$size-2: 36px; //h2
+$size-3: 34px;
+$size-4: 28px; //h3
+$size-5: 24px; //h4
+$size-6: 20px; 
+$size-7: 18px;
+$size-8: 15px; //h5
+$size-9: 14px;
+
+.btn-base {
+  border-radius: 30px;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 27.2px;
+  text-transform: uppercase;
+  padding: 10px 40px;
+}
+
+.btn-primary {
+  @extend .btn-base;
+  background-color: $primary;
+  &:hover{
+    background-color: $primary; 
+  }
+}
+
+.btn-light {
+  @extend .btn-base;
+  background-color: $white;
+  color: $primary;
+  &:hover{
+    color: $primary; 
+  }
+}
+
+h1 {
+  font-size: $size-1;
+  margin: 0;
+}
+
+h2 {
+  font-size: $size-2;
+  margin: 0;
+}
+
+h3 {
+  font-size: $size-4;
+  margin: 0;
+}
+
+h4 {
+  font-size: $size-5;
+  margin: 0;
+}
+
+h5{
+  font-size: $size-8;
+  margin: 0;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "bionic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node-sass sass/style.scss -o ./ --indent-width 1 -w --output-style compressed",
+    "css": "node-sass sass/style.scss -o ./ --output-style compressed",
+    "bootstrap": "node-sass sass/bootstrap.scss -o sass/ --output-style compressed"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

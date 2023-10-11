@@ -1,0 +1,42 @@
+header {
+  .logo {
+    width: 200px;
+    height: 55px;
+  }
+
+  .section-top-menu {
+    display: flex;
+    width: 100%;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 0;
+
+    .navbar-nav .nav-link {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 14px;
+      letter-spacing: 0em;
+      text-transform: uppercase;
+      padding: 0;
+      margin-right: 28px;
+      color: $secondary;
+    }
+
+    .navbar-nav .nav-item:last-child .nav-link {
+      margin-right: 0;
+    }
+
+    @media (max-width: 1200px) {
+      .navbar-nav {
+        padding-top: 14px;
+
+        li a {
+          display: inline-block;
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+}

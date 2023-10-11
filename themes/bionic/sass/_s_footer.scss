@@ -1,0 +1,134 @@
+.section-footer {
+  .footer-top {
+    padding: 32px 0 49px 0;
+    background-color: $primary;
+
+    ul {
+      padding: 0;
+      margin: 0;
+
+      li {
+        list-style-type: none;
+
+        a {
+          color: $alto;
+          font-family: "Inter";
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 15px;
+          margin-bottom: 7.5px;
+        }
+      }
+    }
+
+    h5 {
+      color: $white;
+      font-family: "Inter";
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 19.2px;
+      text-transform: uppercase;
+      margin-bottom: 9px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .member-portal {
+      padding-top: 41px;
+    }
+  }
+
+  .footer-bottom {
+    background-color: $regal-blue;
+    padding: 15px 0;
+
+    .copyright {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      color: $white;
+      opacity: 0.5;
+      font-family: "Inter";
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 30.6px;
+    }
+
+    .social {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+
+      i {
+        opacity: 0.6;
+        color: $white;
+        margin-right: 10px;
+        padding: 15px;
+        font-size: 22px;
+      }
+    }
+  }
+
+  .headquarters {
+    padding-left: 10px;
+
+    .title {
+      color: $white;
+      font-family: "Inter";
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 16.8px;
+      padding: 29px 0 21px 0;
+      text-transform: uppercase;
+    }
+
+    .address {
+      color: $white;
+      font-family: "Inter";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      padding: 0 0 15px 0;
+    }
+
+    .contact {
+      color: $alto;
+      font-family: "Inter";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+  }
+
+  .footer-el {
+    position: absolute;
+    width: 95px;
+    height: 103px;
+    bottom: -1px;
+    left: 12px;
+    background-image: url("./img/footer_el.png");
+    background-position: top;
+    background-size: contain;
+  }
+
+  @media (max-width: 991px) {
+    .footer-top {
+
+      ul,
+      .member-portal {
+        padding-top: 20px;
+      }
+
+      .headquarters .title{
+        padding-top: 10px;
+      }
+
+      .small-logo{
+        padding-top: 40px;
+      }
+    }
+  }
+}

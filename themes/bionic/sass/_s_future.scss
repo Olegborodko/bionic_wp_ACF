@@ -1,0 +1,18 @@
+.section-future {
+  margin-bottom: 157px;
+
+  p {
+    color: $secondary;
+    text-align: center;
+    font-family: "Univia Pro";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 150%;
+    max-width: 830px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 991px) {
+    margin-bottom: 130px;
+  }
+}

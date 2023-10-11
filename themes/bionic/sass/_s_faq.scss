@@ -1,0 +1,120 @@
+.section-faq {
+  background-image: url("img/bg_faq.png");
+  background-size: cover;
+  margin-bottom: 133px;
+
+  h2 {
+    color: $primary;
+    text-align: center;
+    font-family: "Univia Pro";
+    font-weight: 500;
+    line-height: 120%;
+    padding: 95px 0 80px;
+  }
+
+  #accordion {
+    .accordion {
+      margin-bottom: 27px;
+
+      &:last-child {
+        margin-bottom: 47px;
+      }
+    }
+
+    .accordion-item {
+      background-color: transparent;
+      border: 0;
+    }
+
+    .accordion-title {
+      position: relative;
+      display: block;
+      color: $primary;
+      font-family: "Univia Pro";
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 120%;
+      box-shadow: none;
+      padding: 0 0 0 74px;
+      width: 100%;
+      text-align: left;
+
+      .minus,
+      .plus {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      .minus {
+        background-image: url("./img/minus_.svg");
+      }
+
+      .plus {
+        background-image: url("./img/plus_.svg");
+      }
+
+      &[aria-expanded="false"] {
+        .minus {
+          display: none;
+        }
+
+        .plus {
+          display: inline-block;
+        }
+      }
+
+      &[aria-expanded="true"] {
+        .minus {
+          display: inline-block;
+        }
+
+        .plus {
+          display: none;
+        }
+      }
+    }
+
+    .accordion-body {
+      padding: 16px 0 0 74px;
+      color: $secondary;
+      font-family: "Univia Pro";
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 120%;
+    }
+  }
+
+  a.btn {
+    margin: 0 0 72px 6px;
+  }
+
+  .bionik-pc {
+    max-width: 100%;
+  }
+
+  @media (max-width: 991px) {
+    margin-bottom: 60px;
+
+    #accordion {
+      padding-top: 60px;
+
+      .accordion-title,
+      .accordion-body {
+        padding-left: 60px;
+      }
+    }
+
+    h2 {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    a.btn {
+      margin-bottom: 60px;
+    }
+  }
+}

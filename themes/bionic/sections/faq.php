@@ -34,12 +34,12 @@
                     aria-controls="collapse-<?= $key ?>">
                     <span class="minus"></span>
                     <span class="plus"></span>
-                    <?= $row['title'] ?>
+                    <?= $row['title'] ?? '' ?>
                   </button>
                 </div>
                 <div id="collapse-<?= $key ?>" class="collapse <?= $show ?>" aria-labelledby="heading-<?= $key ?>">
                   <div class="accordion-body">
-                    <?= $row['text'] ?>
+                    <?= $row['text'] ?? '' ?>
                   </div>
                 </div>
               </div>

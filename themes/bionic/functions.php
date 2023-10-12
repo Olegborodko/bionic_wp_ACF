@@ -190,17 +190,27 @@ if( function_exists('acf_add_options_page') ) {
   acf_add_options_page();
 }
 
-// function show_menu_slugs() {
-//   $menus = get_terms('nav_menu');
-//   echo '<pre>';
-//   foreach ($menus as $menu) {
-//     echo 'Menu Name: ' . $menu->name . ' | Menu Slug: ' . $menu->slug . '<br>';
-//   }
-//   echo '</pre>';
-// }
-// add_action('wp_footer', 'show_menu_slugs');
-
 function acf_wysiwyg_remove_wpautop() {
   remove_filter('acf_the_content', 'wpautop' );
 }
 add_action('acf/init', 'acf_wysiwyg_remove_wpautop');
+
+function bionic_acf_content($group){
+  if (!$group) {
+    return '';
+  }
+
+  $arr = get_field($group);
+  if (!$arr) {
+    return '';
+  }
+
+  return [
+    'title' => array_key_exists('title', $arr) ? $arr['title'] : '',
+    'text' => array_key_exists('text', $arr) ? $arr['text'] : '',
+    'btnText' => array_key_exists('btn_text', $arr) ? $arr['btn_text'] : '',
+    'btnUrl' => array_key_exists('btn_url', $arr) ? $arr['btn_url'] : '',
+    'image' => array_key_exists('image', $arr) ? $arr['image']['url'] : '',
+    'video' => array_key_exists('video', $arr) ? $arr['video']['url'] : '',
+  ];
+}

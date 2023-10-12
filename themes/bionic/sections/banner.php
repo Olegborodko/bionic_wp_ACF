@@ -4,27 +4,17 @@
       <div class="col-12 col-lg-5">
         <h1>
           <?php
-          $arrBanner = get_field('banner');
+          $content = bionic_acf_content('banner');
 
-          $title = '';
-          $text = '';
-          $image = '';
-
-          if ($arrBanner) {
-            $title = $arrBanner['title'];
-            $text = $arrBanner['text'];
-            $image = $arrBanner['image']['url'];
-          }
-
-          echo $title;
+          echo $content['title'] ?? '';
           ?>
         </h1>
         <p>
-          <?php echo $text; ?>
+          <?php echo $content['text'] ?? '' ?>
         </p>
       </div>
       <div class="col-12 col-lg-7 d-flex">
-        <img class="slider-hero" src="<?= $image ?>" alt="slider hero">
+        <img class="slider-hero" src="<?= $content['image'] ?? '' ?>" alt="slider hero">
       </div>
     </div>
   </div>

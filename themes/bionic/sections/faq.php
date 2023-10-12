@@ -3,28 +3,14 @@
     <div class="row">
       <h2>
         <?php
-        $arr = get_field('faq');
-
-        $title = '';
-        $text = '';
-        $btnText = '';
-        $btnUrl = '';
-        $image = '';
-
-        if ($arr) {
-          $title = $arr['title'];
-          $text = $arr['text'];
-          $btnText = $arr['btn_text'];
-          $btnUrl = $arr['btn_url'];
-          $image = $arr['image']['url'];
-        }
+        $content = bionic_acf_content('faq');
+        echo $content['title'] ?? '';
         ?>
-        <?= $title ?>
       </h2>
     </div>
     <div class="row">
       <div class="col-12 col-lg-5">
-        <img class="bionik-pc" src="<?= $image ?>" alt="bionik pc">
+        <img class="bionik-pc" src="<?= $content['image'] ?? '' ?>" alt="bionik pc">
       </div>
       <div class="col-12 col-lg-7">
         <div id="accordion">
@@ -62,8 +48,8 @@
           }
           ?>
         </div>
-        <a href="<?= $btnUrl ?>" class="btn btn-primary">
-          <?= $btnText ?>
+        <a href="<?= $content['btnUrl'] ?? '' ?>" class="btn btn-primary">
+          <?= $content['btnText'] ?? '' ?>
         </a>
       </div>
     </div>

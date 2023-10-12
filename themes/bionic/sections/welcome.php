@@ -2,34 +2,19 @@
   <div class="top">
     <h4>
       <?php
-      $arr = get_field('welcome');
-
-      $title = '';
-      $text = '';
-      $btnText = '';
-      $btnUrl = '';
-      $video = '';
-
-      if ($arr) {
-        $title = $arr['title'];
-        $text = $arr['text'];
-        $btnText = $arr['btn_text'];
-        $btnUrl = $arr['btn_url'];
-        $video = $arr['video']['url'];
-      }
+      $content = bionic_acf_content('welcome');
+      echo $content['title'] ?? '';
       ?>
-
-      <?= $title ?>
     </h4>
     <p>
-      <?= $text ?>
+      <?= $content['text'] ?? ''; ?>
     </p>
-    <a href="<?= $btnUrl ?>" class="btn btn-primary">
-      <?= $btnText ?>
+    <a href="<?= $content['btnUrl'] ?? ''; ?>" class="btn btn-primary">
+      <?= $content['btnText'] ?? ''; ?>
     </a>
   </div>
   <video controls>
-    <source src="<?= $video ?>" type="video/mp4">
+    <source src="<?= $content['video'] ?? ''; ?>" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </section>

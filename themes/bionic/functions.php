@@ -199,3 +199,8 @@ if( function_exists('acf_add_options_page') ) {
 //   echo '</pre>';
 // }
 // add_action('wp_footer', 'show_menu_slugs');
+
+function acf_wysiwyg_remove_wpautop() {
+  remove_filter('acf_the_content', 'wpautop' );
+}
+add_action('acf/init', 'acf_wysiwyg_remove_wpautop');

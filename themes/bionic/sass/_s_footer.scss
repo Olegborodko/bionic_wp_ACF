@@ -116,14 +116,17 @@
 
   @media (max-width: 991px) {
     .footer-top {
-
       ul,
-      .member-portal {
+      ul:first-child {
         padding-top: 20px;
       }
 
-      .headquarters .title {
-        padding-top: 10px;
+      .headquarters {
+        padding: 20px 0 0 0;
+
+        .title {
+          padding-top: 10px;
+        }
       }
 
       .small-logo {

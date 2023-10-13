@@ -4,7 +4,7 @@
     background-color: $primary;
 
     ul {
-      padding: 0;
+      padding: 41px 0 0 0;
       margin: 0;
 
       li {
@@ -19,6 +19,10 @@
           margin-bottom: 7.5px;
         }
       }
+    }
+
+    ul:first-child {
+      padding-top: 0;
     }
 
     h5 {
@@ -36,8 +40,35 @@
       text-decoration: none;
     }
 
-    .member-portal {
-      padding-top: 41px;
+    .headquarters {
+      padding: 0 0 0 10px;
+
+      .title {
+        color: $white;
+        font-family: "Inter";
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16.8px;
+        padding: 29px 0 21px 0;
+        text-transform: uppercase;
+      }
+
+      .address {
+        color: $white;
+        font-family: "Inter";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        padding: 0 0 15px 0;
+      }
+
+      .contact {
+        color: $alto;
+        font-family: "Inter";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+      }
     }
   }
 
@@ -72,37 +103,6 @@
     }
   }
 
-  .headquarters {
-    padding-left: 10px;
-
-    .title {
-      color: $white;
-      font-family: "Inter";
-      font-size: 14px;
-      font-weight: 600;
-      line-height: 16.8px;
-      padding: 29px 0 21px 0;
-      text-transform: uppercase;
-    }
-
-    .address {
-      color: $white;
-      font-family: "Inter";
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 20px;
-      padding: 0 0 15px 0;
-    }
-
-    .contact {
-      color: $alto;
-      font-family: "Inter";
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 20px;
-    }
-  }
-
   .footer-el {
     position: absolute;
     width: 95px;
@@ -122,11 +122,11 @@
         padding-top: 20px;
       }
 
-      .headquarters .title{
+      .headquarters .title {
         padding-top: 10px;
       }
 
-      .small-logo{
+      .small-logo {
         padding-top: 40px;
       }
     }

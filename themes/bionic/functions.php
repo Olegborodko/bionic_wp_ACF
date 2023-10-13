@@ -195,12 +195,12 @@ function acf_wysiwyg_remove_wpautop() {
 }
 add_action('acf/init', 'acf_wysiwyg_remove_wpautop');
 
-function bionic_acf_content($group){
+function bionic_acf_content($group, $option = ''){
   if (!$group) {
     return '';
   }
 
-  $arr = get_field($group);
+  $arr = get_field($group, $option);
   if (!$arr) {
     return '';
   }
@@ -212,5 +212,12 @@ function bionic_acf_content($group){
     'btnUrl' => array_key_exists('btn_url', $arr) ? $arr['btn_url'] : '',
     'image' => array_key_exists('image', $arr) ? $arr['image']['url'] : '',
     'video' => array_key_exists('video', $arr) ? $arr['video']['url'] : '',
+    'address' => array_key_exists('address', $arr) ? $arr['address'] : '',
+    'contacts' => array_key_exists('contacts', $arr) ? $arr['contacts'] : '',
+
+    'facebook' => array_key_exists('facebook', $arr) ? $arr['facebook'] : '',
+    'twitter' => array_key_exists('twitter', $arr) ? $arr['twitter'] : '',
+    'youtube' => array_key_exists('youtube', $arr) ? $arr['youtube'] : '',
+    'linkedin' => array_key_exists('linkedin', $arr) ? $arr['linkedin'] : '',
   ];
 }
